@@ -1,8 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "cvv4bujkq7gzOM0PJBfMRJcb4Q2g/NuZMuIvLuVyAZM/TRzclicgWkcJgnXiqMqBaBTzOsPMyYsMvGj+TN215A==",
+  "dgSpecHash": "qgvHkGoLZ4LPm4Ng7HrMlP850Kym++oalaTEiI/WW35cr01UGI7xGrAJNhpD39vlTiobLCqzdRhYbs9qv3uFVQ==",
   "success": true,
-  "projectFilePath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\ehb.it-minds.dk\\Source\\Repos\\SwimShifts\\Shifts.Infrastructure.Sheets\\Shifts.Infrastructure.Sheets.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis\\1.64.0\\google.apis.1.64.0.nupkg.sha512",
+    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis.auth\\1.64.0\\google.apis.auth.1.64.0.nupkg.sha512",
+    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis.core\\1.64.0\\google.apis.core.1.64.0.nupkg.sha512",
+    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis.sheets.v4\\1.64.0.3148\\google.apis.sheets.v4.1.64.0.3148.nupkg.sha512",
+    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
+    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+  ],
   "logs": []
 }
