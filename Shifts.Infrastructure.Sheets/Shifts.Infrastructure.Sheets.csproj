@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Sheets.v4" Version="1.64.0.3148" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shifts.Application\Shifts.Application.csproj" />
+  </ItemGroup>
+
 </Project>
