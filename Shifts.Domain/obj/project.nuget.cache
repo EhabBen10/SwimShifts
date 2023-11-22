@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RIY4Dz1veCCEwu8VYwN4243WMKTvafol92Lv1ykPewB2dY8fqvLLPtIERcFCoBGUVTLnf5++a+pPu0Av/hOCGQ==",
+  "dgSpecHash": "BFgyGb/yVkOOP0RMENyZy07Uz3in9yodWiXkkEqU4w82rDrStcT2/XLtXmWuATs8ifJDKCSNGLgGz/g4abm4bw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ehb.it-minds.dk\\Source\\Repos\\SwimShifts\\Shifts.Domain\\Shifts.Domain.csproj",
+  "projectFilePath": "/Users/ehabbasha/Projects/Shifts/Shifts.Domain/Shifts.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

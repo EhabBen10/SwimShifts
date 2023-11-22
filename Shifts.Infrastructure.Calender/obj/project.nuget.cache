@@ -1,16 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "bRyxGECXopsTmFlx3JhTVk4fOrBpNKyRKQz6qzuz+lKYXKySPqGVba5VjV70PbTU2z60SgiZ+LskpcEiqs0ssQ==",
+  "dgSpecHash": "t4sJfKOgJGyKnzgZ/xTz584Icuy8+9OipvR6QqrS83ZRwX8Wp86ZJWDM7e1k7p4DEP2vCODFQQGb6P0SjudL+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ehb.it-minds.dk\\Source\\Repos\\SwimShifts\\Shifts.Infrastructure.Calender\\Shifts.Infrastructure.Calender.csproj",
+  "projectFilePath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Calender/Shifts.Infrastructure.Calender.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis\\1.64.0\\google.apis.1.64.0.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis.auth\\1.64.0\\google.apis.auth.1.64.0.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis.calendar.v3\\1.64.0.3171\\google.apis.calendar.v3.1.64.0.3171.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis.core\\1.64.0\\google.apis.core.1.64.0.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+    "/Users/ehabbasha/.nuget/packages/google.apis/1.64.0/google.apis.1.64.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/google.apis.auth/1.64.0/google.apis.auth.1.64.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/google.apis.calendar.v3/1.64.0.3171/google.apis.calendar.v3.1.64.0.3171.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/google.apis.core/1.64.0/google.apis.core.1.64.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/system.codedom/7.0.0/system.codedom.7.0.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/system.management/7.0.2/system.management.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }

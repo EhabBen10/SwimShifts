@@ -871,32 +871,33 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\": {}
+    "/Users/ehabbasha/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ehb.it-minds.dk\\Source\\Repos\\SwimShifts\\Shifts.Infrastructure.Sheets\\Shifts.Infrastructure.Sheets.csproj",
+      "projectUniqueName": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj",
       "projectName": "Shifts.Infrastructure.Sheets",
-      "projectPath": "C:\\Users\\ehb.it-minds.dk\\Source\\Repos\\SwimShifts\\Shifts.Infrastructure.Sheets\\Shifts.Infrastructure.Sheets.csproj",
-      "packagesPath": "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ehb.it-minds.dk\\Source\\Repos\\SwimShifts\\Shifts.Infrastructure.Sheets\\obj\\",
+      "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj",
+      "packagesPath": "/Users/ehabbasha/.nuget/packages/",
+      "outputPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ehb.it-minds.dk\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/ehabbasha/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\ehb.it-minds.dk\\Source\\Repos\\SwimShifts\\Shifts.Application\\Shifts.Application.csproj": {
-              "projectPath": "C:\\Users\\ehb.it-minds.dk\\Source\\Repos\\SwimShifts\\Shifts.Application\\Shifts.Application.csproj"
+            "/Users/ehabbasha/Projects/Shifts/Shifts.Application/Shifts.Application.csproj": {
+              "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Application/Shifts.Application.csproj"
             }
           }
         }
@@ -948,7 +949,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Hgq2SeCaBXV9+GNPwgLCoMVtBJQVfTnYjSL19JJ0dmeLKrYzxB6xyflwkjvAjFZjvSRF0YlIMYTBtgWaCeBM4A==",
+  "dgSpecHash": "EaNouktv5+etM+HiTb64GIlnybbb7KKCesn46uO+pKRJt0PkhDCVvmSbNrnzFoPjEK/vQRVuvZIzKcD+cdshqg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ehb.it-minds.dk\\Source\\Repos\\SwimShifts\\Shifts.Application\\Shifts.Application.csproj",
+  "projectFilePath": "/Users/ehabbasha/Projects/Shifts/Shifts.Application/Shifts.Application.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis\\1.64.0\\google.apis.1.64.0.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis.auth\\1.64.0\\google.apis.auth.1.64.0.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\google.apis.core\\1.64.0\\google.apis.core.1.64.0.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\system.codedom\\7.0.0\\system.codedom.7.0.0.nupkg.sha512",
-    "C:\\Users\\ehb.it-minds.dk\\.nuget\\packages\\system.management\\7.0.2\\system.management.7.0.2.nupkg.sha512"
+    "/Users/ehabbasha/.nuget/packages/google.apis/1.64.0/google.apis.1.64.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/google.apis.auth/1.64.0/google.apis.auth.1.64.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/google.apis.core/1.64.0/google.apis.core.1.64.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/system.codedom/7.0.0/system.codedom.7.0.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/system.management/7.0.2/system.management.7.0.2.nupkg.sha512"
   ],
   "logs": []
 }
