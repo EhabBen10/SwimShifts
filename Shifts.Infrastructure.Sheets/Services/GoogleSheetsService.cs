@@ -2,11 +2,12 @@
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
+using Shifts.Application.Interfaces;
 using Shifts.Application.Models;
 
-namespace Shifts.Infrastructure.Sheets;
+namespace Shifts.Infrastructure.Sheets.Services;
 
-public class ReadFromGoogleSheet
+public class GoogleSheetsService : IGoogleSheetsService
 {
     private List<string> weekDays = new List<string>()
     {
