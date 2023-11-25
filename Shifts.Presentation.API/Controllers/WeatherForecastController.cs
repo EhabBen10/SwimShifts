@@ -1,4 +1,9 @@
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Sheets.v4;
 using Microsoft.AspNetCore.Mvc;
+using Shifts.Application.Interfaces;
+using Shifts.Application.Models;
+using Shifts.Infrastructure.Sheets.Services;
 
 namespace Shifts.Presentation.API.Controllers;
 
@@ -6,27 +11,18 @@ namespace Shifts.Presentation.API.Controllers;
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
 {
-    private static readonly string[] Summaries = new[]
-    {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
+    public IGoogleSheetsService _googleSheetsService;
 
-    private readonly ILogger<WeatherForecastController> _logger;
-
-    public WeatherForecastController(ILogger<WeatherForecastController> logger)
+    public WeatherForecastController(IGoogleSheetsService googleSheetsService)
     {
-        _logger = logger;
+        _googleSheetsService = googleSheetsService;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
-    public IEnumerable<WeatherForecast> Get()
+
+    [HttpGet(Name = "getshifts")]
+    public async Task<List<Shift>> Get()
     {
-        return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-        {
-            Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            TemperatureC = Random.Shared.Next(-20, 55),
-            Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-        })
-        .ToArray();
+      await _googleSheetsService.ReadDataFromGoogleSheet();
+        return null;
     }
 }
