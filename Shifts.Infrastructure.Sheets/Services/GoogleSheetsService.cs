@@ -19,16 +19,32 @@ public class GoogleSheetsService : IGoogleSheetsService
         "Lørdag",
         "Søndag"
     };
-
-    public IList<IList<object>> ReadDataFromGoogleSheet(UserCredential credential)
+    private GoogleSheetsConfig _googleSheetsConfig;
+    public GoogleSheetsService(GoogleSheetsConfig googleSheetsConfig)
     {
+        _googleSheetsConfig = googleSheetsConfig;
+    }
+
+    public async Task<IList<IList<object>>> ReadDataFromGoogleSheet()
+    {
+        string[] scopes = { SheetsService.Scope.Drive };
+
+        UserCredential credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
+                    new ClientSecrets
+                    {
+                        ClientId = _googleSheetsConfig.Installed?.ClientId,
+                        ClientSecret = _googleSheetsConfig.Installed?.ClientSecret
+                    },
+                    scopes,
+                    "user",
+                    CancellationToken.None);
+
+
         var service = new SheetsService(new BaseClientService.Initializer
         {
             HttpClientInitializer = credential,
             ApplicationName = "Vagter"
         });
-
-
         // The "spreadsheetId" is the ID of your Google Sheet, and "range" is the range you want to read.
         SpreadsheetsResource.ValuesResource.GetRequest request = service.Spreadsheets.Values.Get("15SUZ197w4tZRtcyOqf9H3koRuGyUC0G3iFq3xTmkHkQ", "A8:I700");
         ValueRange response = request.Execute();

@@ -54,6 +54,23 @@
           }
         }
       },
+      "Google.Apis.Sheets.v4/1.64.0.3148": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.64.0",
+          "Google.Apis.Auth": "1.64.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Sheets.v4.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Sheets.v4.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Newtonsoft.Json/13.0.3": {
         "type": "package",
         "compile": {
@@ -195,6 +212,28 @@
         "lib/netstandard2.0/Google.Apis.Core.xml"
       ]
     },
+    "Google.Apis.Sheets.v4/1.64.0.3148": {
+      "sha512": "5BFNlAQO1yjBtjRhKDp4UaA0XmCWIpS7sDNuc1my5jzvGpdbFlHB5uMSuBwXKsSopk2t/lzVDb2hH0fkNCengQ==",
+      "type": "package",
+      "path": "google.apis.sheets.v4/1.64.0.3148",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.sheets.v4.1.64.0.3148.nupkg.sha512",
+        "google.apis.sheets.v4.nuspec",
+        "lib/net45/Google.Apis.Sheets.v4.dll",
+        "lib/net45/Google.Apis.Sheets.v4.pdb",
+        "lib/net45/Google.Apis.Sheets.v4.xml",
+        "lib/netstandard1.3/Google.Apis.Sheets.v4.dll",
+        "lib/netstandard1.3/Google.Apis.Sheets.v4.pdb",
+        "lib/netstandard1.3/Google.Apis.Sheets.v4.xml",
+        "lib/netstandard2.0/Google.Apis.Sheets.v4.dll",
+        "lib/netstandard2.0/Google.Apis.Sheets.v4.pdb",
+        "lib/netstandard2.0/Google.Apis.Sheets.v4.xml"
+      ]
+    },
     "Newtonsoft.Json/13.0.3": {
       "sha512": "HrC5BXdl00IP9zeV+0Z848QWPAoCr9P3bDEZguI+gkLcBKAOxix/tLEAAHC+UvDNPv4a2d18lOReHMOagPa+zQ==",
       "type": "package",
@@ -289,6 +328,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Google.Apis.Auth >= 1.64.0",
+      "Google.Apis.Sheets.v4 >= 1.64.0.3148",
       "Shifts.Domain >= 1.0.0"
     ]
   },
@@ -337,6 +377,10 @@
           "Google.Apis.Auth": {
             "target": "Package",
             "version": "[1.64.0, )"
+          },
+          "Google.Apis.Sheets.v4": {
+            "target": "Package",
+            "version": "[1.64.0.3148, )"
           }
         },
         "imports": [

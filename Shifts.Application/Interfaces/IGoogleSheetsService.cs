@@ -1,11 +1,12 @@
 ﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Sheets.v4;
 using Shifts.Application.Models;
 
 namespace Shifts.Application.Interfaces
 {
     public interface IGoogleSheetsService
     {
-        IList<IList<object>> ReadDataFromGoogleSheet(UserCredential credential);
+         Task<IList<IList<object>>> ReadDataFromGoogleSheet();
 
         List<Shift> Findvagter(IList<IList<object>> values, string nameToSearch);
 
