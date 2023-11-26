@@ -8,7 +8,7 @@ namespace Shifts.Application.Interfaces
     {
          Task<IList<IList<object>>> ReadDataFromGoogleSheet();
 
-        List<Shift> Findvagter(IList<IList<object>> values, string nameToSearch);
+        List<Shift> FindShifts(IList<IList<object>> values, string nameToSearch);
 
     }
 }

@@ -2,6 +2,7 @@
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
+using Microsoft.Extensions.Options;
 using Shifts.Application.Interfaces;
 using Shifts.Application.Models;
 
@@ -20,9 +21,9 @@ public class GoogleSheetsService : IGoogleSheetsService
         "Søndag"
     };
     private GoogleSheetsConfig _googleSheetsConfig;
-    public GoogleSheetsService(GoogleSheetsConfig googleSheetsConfig)
+    public GoogleSheetsService(IOptions<GoogleSheetsConfig> googleSheetsConfig)
     {
-        _googleSheetsConfig = googleSheetsConfig;
+        _googleSheetsConfig = googleSheetsConfig.Value;
     }
 
     public async Task<IList<IList<object>>> ReadDataFromGoogleSheet()
@@ -32,8 +33,8 @@ public class GoogleSheetsService : IGoogleSheetsService
         UserCredential credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
                     new ClientSecrets
                     {
-                        ClientId = _googleSheetsConfig.Installed?.ClientId,
-                        ClientSecret = _googleSheetsConfig.Installed?.ClientSecret
+                        ClientId = _googleSheetsConfig.client_id,
+                        ClientSecret = _googleSheetsConfig.client_secret
                     },
                     scopes,
                     "user",
@@ -54,7 +55,7 @@ public class GoogleSheetsService : IGoogleSheetsService
         return values;
     }
 
-    public List<Shift> Findvagter(IList<IList<object>> values, string nameToSearch)
+    public List<Shift> FindShifts(IList<IList<object>> values, string nameToSearch)
     {
         List<Shift> shifts = new List<Shift>();
 

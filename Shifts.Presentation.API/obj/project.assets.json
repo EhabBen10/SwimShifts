@@ -445,6 +445,7 @@
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Google.Apis.Auth": "1.64.0",
+          "Google.Apis.Calendar.v3": "1.64.0.3171",
           "Google.Apis.Sheets.v4": "1.64.0.3148",
           "Shifts.Domain": "1.0.0"
         },
@@ -469,7 +470,12 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Google.Apis.Calendar.v3": "1.64.0.3171"
+          "Google.Apis.Calendar.v3": "1.64.0.3171",
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Http": "7.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "7.0.0",
+          "Shifts.Application": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Shifts.Infrastructure.Calender.dll": {}

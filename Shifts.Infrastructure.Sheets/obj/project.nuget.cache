@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "wSobcXj1xcIUaEQ9FB3C3EKPFgK6zTUstgwWqvseLxvmbOyJCw7c4EZadIvCS13dRZhosPdoCmAPcdz0hOZEPw==",
+  "dgSpecHash": "fdpPEmKjv+/xEkC7iGmAvK0sUcq4DjgEDkKO/GpGeii4fHrpFr6P02iz6/51sAXQDOhakMqLglBX5am/epxHKw==",
   "success": true,
   "projectFilePath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj",
   "expectedPackageFiles": [
     "/Users/ehabbasha/.nuget/packages/google.apis/1.64.0/google.apis.1.64.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/google.apis.auth/1.64.0/google.apis.auth.1.64.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/google.apis.calendar.v3/1.64.0.3171/google.apis.calendar.v3.1.64.0.3171.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/google.apis.core/1.64.0/google.apis.core.1.64.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/google.apis.sheets.v4/1.64.0.3148/google.apis.sheets.v4.1.64.0.3148.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",

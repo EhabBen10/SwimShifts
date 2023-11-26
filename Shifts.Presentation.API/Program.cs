@@ -1,7 +1,5 @@
-using Microsoft.Extensions.Options;
-using Shifts.Application.Interfaces;
 using Shifts.Infrastructure.Sheets;
-using Shifts.Infrastructure.Sheets.Services;
+using Shifts.Infrastructure.Calender;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddGoogleSheets(builder.Configuration);
+builder.Services.AddCalendarServices(builder.Configuration);
 
 var app = builder.Build();
 
