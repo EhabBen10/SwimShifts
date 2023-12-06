@@ -1,4 +1,5 @@
-﻿using Google.Apis.Auth.OAuth2;
+﻿using System.Globalization;
+using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3;
 using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
@@ -16,9 +17,9 @@ public class GoogleCalendarService : IGoogleCalendarService
         _googleSheetsConfig = googleSheetsConfig.Value;
     }
 
-    public async void CreateEvents(List<Event> shifts)
+    public async Task CreateEvents(List<Event> shifts)
     {
-        string[] scopes = { CalendarService.Scope.Calendar };
+        string[] scopes = { CalendarService.Scope.CalendarEvents };
 
         UserCredential credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
                     new ClientSecrets
@@ -29,6 +30,7 @@ public class GoogleCalendarService : IGoogleCalendarService
                     scopes,
                     "user",
                     CancellationToken.None);
+
 
         var service = new CalendarService(new BaseClientService.Initializer()
         {
@@ -59,12 +61,26 @@ public class GoogleCalendarService : IGoogleCalendarService
     public List<Event> events(List<Shift> shifts)
     {
         List<Event> events = new List<Event>();
-        // Parse the date
+        int year = DateTime.Now.Year;
+        bool isFirstJan = true;
         foreach (var shift in shifts)
         {
-            if (shift.Dato != "")
+            if (shift.Dato != null)
             {
-                DateTime date = Convert.ToDateTime(shift.Dato);
+                DateTime currentDate = DateTime.Now;
+                string[] dateParts = shift.Dato.Split('-');
+                int month = DateTime.ParseExact(dateParts[1], "MMM", new CultureInfo("da-DK")).Month;
+                int day = int.Parse(dateParts[0]);
+
+                if (month == 1 && isFirstJan)
+                {
+                    year++;
+                    isFirstJan = false;
+                }
+
+                DateTime date = new DateTime(year, month, day);
+
+
 
                 // Parse the start and end times
                 string[] timeParts = shift.Hours.Split('-');
@@ -74,10 +90,18 @@ public class GoogleCalendarService : IGoogleCalendarService
                 {
                     startTimeString = startTimeString.Replace(".", ":");
                 }
+                else
+                {
+                    startTimeString = startTimeString + ":00";
+                }
 
                 if (endTimeString.Contains("."))
                 {
                     endTimeString = endTimeString.Replace(".", ":");
+                }
+                else
+                {
+                    endTimeString = endTimeString + ":00";
                 }
 
 

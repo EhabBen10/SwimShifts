@@ -1,7 +1,9 @@
 ﻿using Google.Apis.Auth.OAuth2;
+using Google.Apis.Calendar.v3;
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
+using Google.Apis.Util.Store;
 using Microsoft.Extensions.Options;
 using Shifts.Application.Interfaces;
 using Shifts.Application.Models;
@@ -28,8 +30,8 @@ public class GoogleSheetsService : IGoogleSheetsService
 
     public async Task<IList<IList<object>>> ReadDataFromGoogleSheet()
     {
-        string[] scopes = { SheetsService.Scope.Drive };
-
+        string[] scopes = { SheetsService.Scope.Drive, CalendarService.Scope.Calendar };
+        var fileDataStore = new FileDataStore("Google.Apis.Auth", fullPath: false);
         UserCredential credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
                     new ClientSecrets
                     {
@@ -38,8 +40,9 @@ public class GoogleSheetsService : IGoogleSheetsService
                     },
                     scopes,
                     "user",
-                    CancellationToken.None);
+                    CancellationToken.None, fileDataStore);
 
+        string path = fileDataStore.FolderPath;
 
         var service = new SheetsService(new BaseClientService.Initializer
         {
