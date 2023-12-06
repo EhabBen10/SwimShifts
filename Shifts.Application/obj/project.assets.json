@@ -141,16 +141,6 @@
             "rid": "win"
           }
         }
-      },
-      "Shifts.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/Shifts.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shifts.Domain.dll": {}
-        }
       }
     }
   },
@@ -357,19 +347,13 @@
         "system.management.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "Shifts.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Shifts.Domain/Shifts.Domain.csproj",
-      "msbuildProject": "../Shifts.Domain/Shifts.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Google.Apis.Auth >= 1.64.0",
       "Google.Apis.Calendar.v3 >= 1.64.0.3171",
-      "Google.Apis.Sheets.v4 >= 1.64.0.3148",
-      "Shifts.Domain >= 1.0.0"
+      "Google.Apis.Sheets.v4 >= 1.64.0.3148"
     ]
   },
   "packageFolders": {
@@ -397,11 +381,7 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {
-            "/Users/ehabbasha/Projects/Shifts/Shifts.Domain/Shifts.Domain.csproj": {
-              "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Domain/Shifts.Domain.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

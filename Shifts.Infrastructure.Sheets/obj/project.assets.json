@@ -340,24 +340,13 @@
         "dependencies": {
           "Google.Apis.Auth": "1.64.0",
           "Google.Apis.Calendar.v3": "1.64.0.3171",
-          "Google.Apis.Sheets.v4": "1.64.0.3148",
-          "Shifts.Domain": "1.0.0"
+          "Google.Apis.Sheets.v4": "1.64.0.3148"
         },
         "compile": {
           "bin/placeholder/Shifts.Application.dll": {}
         },
         "runtime": {
           "bin/placeholder/Shifts.Application.dll": {}
-        }
-      },
-      "Shifts.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/Shifts.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shifts.Domain.dll": {}
         }
       }
     }
@@ -894,11 +883,6 @@
       "type": "project",
       "path": "../Shifts.Application/Shifts.Application.csproj",
       "msbuildProject": "../Shifts.Application/Shifts.Application.csproj"
-    },
-    "Shifts.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Shifts.Domain/Shifts.Domain.csproj",
-      "msbuildProject": "../Shifts.Domain/Shifts.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {

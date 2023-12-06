@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Apis.Calendar.v3" Version="1.64.0.3171" />
-    <ProjectReference Include="..\Shifts.Domain\Shifts.Domain.csproj" />
     <PackageReference Include="Google.Apis.Sheets.v4" Version="1.64.0.3148" />
   </ItemGroup>
 

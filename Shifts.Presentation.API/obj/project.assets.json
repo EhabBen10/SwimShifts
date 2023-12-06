@@ -446,24 +446,13 @@
         "dependencies": {
           "Google.Apis.Auth": "1.64.0",
           "Google.Apis.Calendar.v3": "1.64.0.3171",
-          "Google.Apis.Sheets.v4": "1.64.0.3148",
-          "Shifts.Domain": "1.0.0"
+          "Google.Apis.Sheets.v4": "1.64.0.3148"
         },
         "compile": {
           "bin/placeholder/Shifts.Application.dll": {}
         },
         "runtime": {
           "bin/placeholder/Shifts.Application.dll": {}
-        }
-      },
-      "Shifts.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "compile": {
-          "bin/placeholder/Shifts.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Shifts.Domain.dll": {}
         }
       },
       "Shifts.Infrastructure.Calender/1.0.0": {
@@ -482,6 +471,23 @@
         },
         "runtime": {
           "bin/placeholder/Shifts.Infrastructure.Calender.dll": {}
+        }
+      },
+      "Shifts.Infrastructure.GoogleAuth/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Http": "7.0.0",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "7.0.0",
+          "Shifts.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Shifts.Infrastructure.GoogleAuth.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Shifts.Infrastructure.GoogleAuth.dll": {}
         }
       },
       "Shifts.Infrastructure.Sheets/1.0.0": {
@@ -1387,15 +1393,15 @@
       "path": "../Shifts.Application/Shifts.Application.csproj",
       "msbuildProject": "../Shifts.Application/Shifts.Application.csproj"
     },
-    "Shifts.Domain/1.0.0": {
-      "type": "project",
-      "path": "../Shifts.Domain/Shifts.Domain.csproj",
-      "msbuildProject": "../Shifts.Domain/Shifts.Domain.csproj"
-    },
     "Shifts.Infrastructure.Calender/1.0.0": {
       "type": "project",
       "path": "../Shifts.Infrastructure.Calender/Shifts.Infrastructure.Calender.csproj",
       "msbuildProject": "../Shifts.Infrastructure.Calender/Shifts.Infrastructure.Calender.csproj"
+    },
+    "Shifts.Infrastructure.GoogleAuth/1.0.0": {
+      "type": "project",
+      "path": "../Shifts.Infrastructure.GoogleAuth/Shifts.Infrastructure.GoogleAuth.csproj",
+      "msbuildProject": "../Shifts.Infrastructure.GoogleAuth/Shifts.Infrastructure.GoogleAuth.csproj"
     },
     "Shifts.Infrastructure.Sheets/1.0.0": {
       "type": "project",
@@ -1408,6 +1414,7 @@
       "Microsoft.AspNetCore.OpenApi >= 7.0.13",
       "Shifts.Application >= 1.0.0",
       "Shifts.Infrastructure.Calender >= 1.0.0",
+      "Shifts.Infrastructure.GoogleAuth >= 1.0.0",
       "Shifts.Infrastructure.Sheets >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
@@ -1444,6 +1451,9 @@
             },
             "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Calender/Shifts.Infrastructure.Calender.csproj": {
               "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Calender/Shifts.Infrastructure.Calender.csproj"
+            },
+            "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.GoogleAuth/Shifts.Infrastructure.GoogleAuth.csproj": {
+              "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.GoogleAuth/Shifts.Infrastructure.GoogleAuth.csproj"
             },
             "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj": {
               "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj"
