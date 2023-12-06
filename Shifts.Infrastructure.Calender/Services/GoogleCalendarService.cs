@@ -10,28 +10,9 @@ namespace Shifts.Infrastructure.Calender.Services;
 
 public class GoogleCalendarService : IGoogleCalendarService
 {
-    private GoogleSheetsConfig _googleSheetsConfig;
 
-    public GoogleCalendarService(IOptions<GoogleSheetsConfig> googleSheetsConfig)
+    public async Task CreateEvents(List<Event> shifts, UserCredential credential)
     {
-        _googleSheetsConfig = googleSheetsConfig.Value;
-    }
-
-    public async Task CreateEvents(List<Event> shifts)
-    {
-        string[] scopes = { CalendarService.Scope.CalendarEvents };
-
-        UserCredential credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    new ClientSecrets
-                    {
-                        ClientId = _googleSheetsConfig.client_id,
-                        ClientSecret = _googleSheetsConfig.client_secret
-                    },
-                    scopes,
-                    "user",
-                    CancellationToken.None);
-
-
         var service = new CalendarService(new BaseClientService.Initializer()
         {
             HttpClientInitializer = credential,

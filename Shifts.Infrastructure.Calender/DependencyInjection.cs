@@ -8,7 +8,6 @@ namespace Shifts.Infrastructure.Calender
     {
         public static IServiceCollection AddCalendarServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.Configure<GoogleSheetsConfig>(configuration.GetSection(nameof(GoogleSheetsConfig)));
             services.AddScoped<IGoogleCalendarService, GoogleCalendarService>();
             return services;
         }

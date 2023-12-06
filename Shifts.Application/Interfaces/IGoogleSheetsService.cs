@@ -6,7 +6,7 @@ namespace Shifts.Application.Interfaces
 {
     public interface IGoogleSheetsService
     {
-         Task<IList<IList<object>>> ReadDataFromGoogleSheet();
+         IList<IList<object>> ReadDataFromGoogleSheet(UserCredential credential);
 
         List<Shift> FindShifts(IList<IList<object>> values, string nameToSearch);
 

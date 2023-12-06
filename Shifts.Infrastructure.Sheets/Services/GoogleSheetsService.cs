@@ -22,28 +22,12 @@ public class GoogleSheetsService : IGoogleSheetsService
         "Lørdag",
         "Søndag"
     };
-    private GoogleSheetsConfig _googleSheetsConfig;
-    public GoogleSheetsService(IOptions<GoogleSheetsConfig> googleSheetsConfig)
+    public GoogleSheetsService()
     {
-        _googleSheetsConfig = googleSheetsConfig.Value;
     }
 
-    public async Task<IList<IList<object>>> ReadDataFromGoogleSheet()
+    public IList<IList<object>> ReadDataFromGoogleSheet(UserCredential credential)
     {
-        string[] scopes = { SheetsService.Scope.Drive, CalendarService.Scope.Calendar };
-        var fileDataStore = new FileDataStore("Google.Apis.Auth", fullPath: false);
-        UserCredential credential = await GoogleWebAuthorizationBroker.AuthorizeAsync(
-                    new ClientSecrets
-                    {
-                        ClientId = _googleSheetsConfig.client_id,
-                        ClientSecret = _googleSheetsConfig.client_secret
-                    },
-                    scopes,
-                    "user",
-                    CancellationToken.None, fileDataStore);
-
-        string path = fileDataStore.FolderPath;
-
         var service = new SheetsService(new BaseClientService.Initializer
         {
             HttpClientInitializer = credential,

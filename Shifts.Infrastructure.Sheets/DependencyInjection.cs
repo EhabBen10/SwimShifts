@@ -9,7 +9,6 @@ namespace Shifts.Infrastructure.Sheets
     {
         public static IServiceCollection AddGoogleSheets(this IServiceCollection services, IConfiguration configuration)
         {
-            services.Configure<GoogleSheetsConfig>(configuration.GetSection(nameof(GoogleSheetsConfig)));
             services.AddScoped<IGoogleSheetsService, GoogleSheetsService>();
 
             return services;
