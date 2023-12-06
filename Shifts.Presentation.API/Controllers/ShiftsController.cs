@@ -24,7 +24,7 @@ public class ShiftsController : ControllerBase
         IList<IList<object>> objects = await _googleSheetsService.ReadDataFromGoogleSheet();
         List<Shift> shifts =  _googleSheetsService.FindShifts(objects,"Ehab");
         List<Event> events =  _googleCalendarService.events(shifts);
-        //  _googleCalendarService.CreateEvents(events);
+        await _googleCalendarService.CreateEvents(events);
         return null;
     }
 }
