@@ -343,6 +343,9 @@
               },
               "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj": {
                 "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj"
+              },
+              "/Users/ehabbasha/Projects/Shifts/Shifts.Presentation.GraphQL/Shifts.Presentation.GraphQL.csproj": {
+                "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Presentation.GraphQL/Shifts.Presentation.GraphQL.csproj"
               }
             }
           }
@@ -381,6 +384,86 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.310/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/ehabbasha/Projects/Shifts/Shifts.Presentation.GraphQL/Shifts.Presentation.GraphQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/ehabbasha/Projects/Shifts/Shifts.Presentation.GraphQL/Shifts.Presentation.GraphQL.csproj",
+        "projectName": "Shifts.Presentation.GraphQL",
+        "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Presentation.GraphQL/Shifts.Presentation.GraphQL.csproj",
+        "packagesPath": "/Users/ehabbasha/.nuget/packages/",
+        "outputPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Presentation.GraphQL/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/ehabbasha/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/ehabbasha/Projects/Shifts/Shifts.Application/Shifts.Application.csproj": {
+                "projectPath": "/Users/ehabbasha/Projects/Shifts/Shifts.Application/Shifts.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "HotChocolate": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            },
+            "HotChocolate.AspNetCore": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            },
+            "HotChocolate.AspNetCore.Authorization": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            },
+            "HotChocolate.Authorization": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            },
+            "HotChocolate.Data.EntityFramework": {
+              "target": "Package",
+              "version": "[13.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

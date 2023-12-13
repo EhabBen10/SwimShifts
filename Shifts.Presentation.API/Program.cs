@@ -1,6 +1,7 @@
 using Shifts.Infrastructure.Sheets;
 using Shifts.Infrastructure.Calender;
 using Shifts.Infrastructure.GoogleAuth;
+using Shifts.Presentation.GraphQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddGoogleAuthServices(builder.Configuration);
 builder.Services.AddGoogleSheets(builder.Configuration);
 builder.Services.AddCalendarServices(builder.Configuration);
+builder.Services.AddGraphQL();
 
 var app = builder.Build();
 
@@ -28,4 +30,5 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.MapGraphQL();
 app.Run();
