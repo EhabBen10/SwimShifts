@@ -1,10 +1,7 @@
 ﻿using Google.Apis.Auth.OAuth2;
-using Google.Apis.Calendar.v3;
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Sheets.v4.Data;
-using Google.Apis.Util.Store;
-using Microsoft.Extensions.Options;
 using Shifts.Application.Interfaces;
 using Shifts.Application.Models;
 

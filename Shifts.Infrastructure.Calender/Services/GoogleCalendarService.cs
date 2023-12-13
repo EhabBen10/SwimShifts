@@ -3,7 +3,6 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3;
 using Google.Apis.Calendar.v3.Data;
 using Google.Apis.Services;
-using Microsoft.Extensions.Options;
 using Shifts.Application.Models;
 
 namespace Shifts.Infrastructure.Calender.Services;
@@ -23,17 +22,17 @@ public class GoogleCalendarService : IGoogleCalendarService
         {
             EventsResource.ListRequest request = service.Events.List("primary");
             request.TimeMinDateTimeOffset = shift.Start.DateTimeDateTimeOffset;
-            request.TimeMinDateTimeOffset = shift.End.DateTimeDateTimeOffset;
+            request.TimeMaxDateTimeOffset = shift.End.DateTimeDateTimeOffset;
             request.ShowDeleted = false;
             request.SingleEvents = true;
             request.OrderBy = EventsResource.ListRequest.OrderByEnum.StartTime;
 
-            Events existingEvents = request.Execute();
+            Events existingEvents = await request.ExecuteAsync();
 
             if (existingEvents.Items.Count == 0)
             {
                 EventsResource.InsertRequest insert = service.Events.Insert(shift, "primary");
-                insert.Execute();
+                await insert.ExecuteAsync();
             }
         }
     }
