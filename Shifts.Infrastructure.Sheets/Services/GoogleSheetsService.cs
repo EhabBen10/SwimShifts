@@ -53,6 +53,7 @@ public class GoogleSheetsService : IGoogleSheetsService
                     if (row[colIndex] is string stringValue && stringValue == nameToSearch)
                     {
                         Shift shift = new Shift();
+                        shift.Name = nameToSearch;
                         var hoursColumn = values[col - 1];
                         int i = 0;
                         shift.Hours = Convert.ToString(hoursColumn[colIndex]);

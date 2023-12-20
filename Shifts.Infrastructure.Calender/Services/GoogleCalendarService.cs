@@ -9,6 +9,21 @@ namespace Shifts.Infrastructure.Calender.Services;
 
 public class GoogleCalendarService : IGoogleCalendarService
 {
+    private List<string> months = new List<string>()
+    {
+    "jan",
+    "feb",
+    "mar",
+    "apr",
+    "may",
+    "jun",
+    "jul",
+    "aug",
+    "sep",
+    "oct",
+    "nov",
+    "dec"
+    };
 
     public async Task CreateEvents(List<Event> shifts, UserCredential credential)
     {
@@ -48,8 +63,16 @@ public class GoogleCalendarService : IGoogleCalendarService
             if (shift.Dato != null)
             {
                 DateTime currentDate = DateTime.Now;
-                string[] dateParts = shift.Dato.Split('-');
-                int month = DateTime.ParseExact(dateParts[1], "MMM", new CultureInfo("da-DK")).Month;
+                string[] dateParts;
+                if (shift.Dato.Contains("-"))
+                {
+                    dateParts = shift.Dato.Split('-');
+                }
+                else
+                {
+                    dateParts = shift.Dato.Split('.');
+                }
+                int month = FindMonth(dateParts[1]);
                 int day = int.Parse(dateParts[0]);
 
                 if (month == 1 && isFirstJan)
@@ -57,6 +80,7 @@ public class GoogleCalendarService : IGoogleCalendarService
                     year++;
                     isFirstJan = false;
                 }
+
 
                 DateTime date = new DateTime(year, month, day);
 
@@ -68,7 +92,7 @@ public class GoogleCalendarService : IGoogleCalendarService
                 string endTimeString = timeParts[1];
                 if (startTimeString.Contains("."))
                 {
-                    startTimeString = startTimeString.Replace(".", ":");
+                    startTimeString = startTimeString.TrimEnd('.').Replace(".", ":");
                 }
                 else
                 {
@@ -101,6 +125,10 @@ public class GoogleCalendarService : IGoogleCalendarService
 
                 events.Add(new Event
                 {
+                    Creator = new Event.CreatorData
+                    {
+                        DisplayName = shift.Name,
+                    },
                     Summary = "Livredder ved Aarhus Svømmestadion",
                     Location = "F. Vestergaards Gade 5, 8000 Aarhus C",
                     Description = "Redde liv",
@@ -135,5 +163,26 @@ public class GoogleCalendarService : IGoogleCalendarService
         }
         return events;
     }
-}
+    public int FindMonth(string monthstring)
+    {
+        int monthInt;
+        if (int.TryParse(monthstring, out monthInt))
+        {
+            // If the month is a number, just return it.
+            return monthInt;
+        }
+        else
+        {
+            foreach (var month in months)
+            {
+                if (monthstring.Contains(month))
+                {
+                    monthInt = DateTime.ParseExact(month, "MMM", new CultureInfo("da-DK")).Month;
+                    return monthInt;
+                }
+            }
+        }
+        return monthInt;
+    }
 
+}
