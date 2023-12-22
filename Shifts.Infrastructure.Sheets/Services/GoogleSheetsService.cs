@@ -19,10 +19,6 @@ public class GoogleSheetsService : IGoogleSheetsService
         "Lørdag",
         "Søndag"
     };
-    public GoogleSheetsService()
-    {
-    }
-
     public IList<IList<object>> ReadDataFromGoogleSheet(UserCredential credential)
     {
         var service = new SheetsService(new BaseClientService.Initializer

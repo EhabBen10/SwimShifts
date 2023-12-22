@@ -53,7 +53,7 @@ public class GoogleCalendarService : IGoogleCalendarService
     }
 
 
-    public List<Event> events(List<Shift> shifts)
+    public List<Event> events(List<Shift> shifts, string imgUrl)
     {
         List<Event> events = new List<Event>();
         int year = DateTime.Now.Year;
@@ -128,6 +128,10 @@ public class GoogleCalendarService : IGoogleCalendarService
                     Creator = new Event.CreatorData
                     {
                         DisplayName = shift.Name,
+                    },
+                    Gadget = new Event.GadgetData
+                    {
+                        IconLink = imgUrl,
                     },
                     Summary = "Livredder ved Aarhus Svømmestadion",
                     Location = "F. Vestergaards Gade 5, 8000 Aarhus C",

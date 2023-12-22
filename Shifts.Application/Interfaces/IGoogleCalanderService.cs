@@ -5,5 +5,5 @@ using Shifts.Application.Models;
 public interface IGoogleCalendarService
 {
     Task CreateEvents(List<Event> shifts, UserCredential credential);
-    List<Event> events(List<Shift> shifts);
+    List<Event> events(List<Shift> shifts, string imgUrl);
 }

@@ -3,7 +3,6 @@ using Google.Apis.Calendar.v3;
 using Google.Apis.Sheets.v4;
 using Google.Apis.Util.Store;
 using Microsoft.Extensions.Options;
-using Shifts.Application.Interfaces;
 
 namespace Shifts.Infrastructure.GoogleAuth;
 public class GoogleAuthService : IGoogleAuthService
