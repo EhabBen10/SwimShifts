@@ -26,8 +26,8 @@ public class ShiftsController : ControllerBase
     {
         UserCredential credential = await _googleAuthService.AuthorizeAsync();
         IList<IList<object>> objects = _googleSheetsService.ReadDataFromGoogleSheet(credential);
-        List<Shift> shifts =  _googleSheetsService.FindShifts(objects,"Ehab");
-        List<Event> events =  _googleCalendarService.events(shifts);
+        List<Shift> shifts = _googleSheetsService.FindShifts(objects, "Ehab");
+        List<Event> events = _googleCalendarService.events(shifts, "fe");
         await _googleCalendarService.CreateEvents(events, credential);
         return null;
     }
