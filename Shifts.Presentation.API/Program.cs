@@ -5,6 +5,7 @@ using Shifts.Presentation.GraphQL;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddCors(options =>
     options.AddDefaultPolicy(policyBuilder =>
         policyBuilder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
