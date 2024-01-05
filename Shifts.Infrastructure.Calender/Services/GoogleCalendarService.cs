@@ -121,16 +121,11 @@ public class GoogleCalendarService : IGoogleCalendarService
                 // Print the results
                 Console.WriteLine("Start Date and Time: " + startDateTime);
                 Console.WriteLine("End Date and Time: " + endDateTime);
-
-                events.Add(new Event
+                Event newEvent = new Event
                 {
                     Creator = new Event.CreatorData
                     {
                         DisplayName = shift.Name,
-                    },
-                    Gadget = new Event.GadgetData
-                    {
-                        IconLink = imgUrl,
                     },
                     Summary = "Livredder ved Aarhus Svømmestadion",
                     Location = "F. Vestergaards Gade 5, 8000 Aarhus C",
@@ -160,7 +155,16 @@ public class GoogleCalendarService : IGoogleCalendarService
                         new EventReminder { Method = "popup", Minutes = 10 }
                     }
                     }
-                });
+
+                };
+                if (imgUrl != null)
+                {
+                    newEvent.Gadget = new Event.GadgetData
+                    {
+                        IconLink = imgUrl,
+                    };
+                }
+                events.Add(newEvent);
             }
 
         }
@@ -188,4 +192,8 @@ public class GoogleCalendarService : IGoogleCalendarService
         return monthInt;
     }
 
+}
+
+internal class Userinfoplus
+{
 }
