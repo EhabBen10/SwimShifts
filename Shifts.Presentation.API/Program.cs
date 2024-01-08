@@ -2,10 +2,11 @@ using Shifts.Infrastructure.Sheets;
 using Shifts.Infrastructure.Calender;
 using Shifts.Infrastructure.GoogleAuth;
 using Shifts.Presentation.GraphQL;
+using Shifts.Infrastructure.Persistence.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
+builder.Services.AddDb(builder.Configuration);
 builder.Services.AddCors(options =>
     options.AddDefaultPolicy(policyBuilder =>
         policyBuilder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));

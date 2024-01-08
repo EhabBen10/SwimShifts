@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "44p1kygpUaT8pF8cmxTpUDBUfBT0hvRTdl+Uel5Nf0ZeZUhcDZcWRvR7sJnFOvkPXIkxiELjiK9P+8Tcov00zw==",
+  "dgSpecHash": "srUtasQNuB6tbOQUNCuf7XArna8hrnwB6DXfFR9iNlmhSxv/oCds98svUR5iPW9gaYxKqXjgUN/6JpGe560dMQ==",
   "success": true,
   "projectFilePath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,11 @@
     "/Users/ehabbasha/.nuget/packages/google.apis.calendar.v3/1.64.0.3171/google.apis.calendar.v3.1.64.0.3171.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/google.apis.core/1.64.0/google.apis.core.1.64.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/google.apis.sheets.v4/1.64.0.3148/google.apis.sheets.v4.1.64.0.3148.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.entityframeworkcore/7.0.13/microsoft.entityframeworkcore.7.0.13.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.13/microsoft.entityframeworkcore.abstractions.7.0.13.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.13/microsoft.entityframeworkcore.analyzers.7.0.13.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/microsoft.extensions.configuration.abstractions/7.0.0/microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/microsoft.extensions.configuration.binder/7.0.0/microsoft.extensions.configuration.binder.7.0.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",

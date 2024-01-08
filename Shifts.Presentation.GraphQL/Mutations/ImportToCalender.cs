@@ -10,7 +10,7 @@ namespace Shifts.Presentation.GraphQL.Mutations
         public async Task<bool> ImportToGoogleCalenderAsync(IGoogleCalendarService _googleCalendarService, IGoogleAuthService _googleAuthService, List<Shift> shifts)
         {
             UserCredential credential = await _googleAuthService.AuthorizeAsync();
-            List<Event> events = _googleCalendarService.events(shifts, null);
+            List<Event> events = _googleCalendarService.events(shifts, "");
             await _googleCalendarService.CreateEvents(events, credential);
             return true;
         }
