@@ -21,7 +21,8 @@ public static class DependencyInjection
       .AddQueryType(q => q.Name("Query"))
       .AddTypeExtension<EventsQuery>()
       .AddMutationType(m => m.Name("Mutation"))
-      .AddTypeExtension<ImportToCalender>();
+      .AddTypeExtension<ImportToCalender>()
+      .AddTypeExtension<UploadToDB>();
 
     return services;
   }
