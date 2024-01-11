@@ -1,4 +1,3 @@
-using Shifts.Application.Interfaces;
 using Shifts.Application.Services;
 
 namespace Microsoft.Extensions.DependencyInjection;

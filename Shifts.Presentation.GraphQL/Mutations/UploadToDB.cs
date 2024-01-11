@@ -1,4 +1,6 @@
 
+using Shifts.Presentation.GraphQL.Payloads;
+
 [ExtendObjectType("Mutation")]
 public class UploadToDB
 {

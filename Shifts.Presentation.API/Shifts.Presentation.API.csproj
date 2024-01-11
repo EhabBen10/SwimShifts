@@ -11,9 +11,9 @@
     <ProjectReference Include="..\Shifts.Infrastructure.Calender\Shifts.Infrastructure.Calender.csproj" />
     <ProjectReference Include="..\Shifts.Infrastructure.Sheets\Shifts.Infrastructure.Sheets.csproj" />
     <ProjectReference Include="..\Shifts.Infrastructure.GoogleAuth\Shifts.Infrastructure.GoogleAuth.csproj" />
-     <ProjectReference Include="..\Shifts.Presentation.GraphQL\Shifts.Presentation.GraphQL.csproj" />
-      <ProjectReference Include="..\Shifts.Infrastructure.Persistence\Shifts.Infrastructure.Persistence.csproj" />
-
+    <ProjectReference Include="..\Shifts.Presentation.GraphQL\Shifts.Presentation.GraphQL.csproj" />
+    <ProjectReference Include="..\Shifts.Infrastructure.Persistence\Shifts.Infrastructure.Persistence.csproj" />
+     <ProjectReference Include="..\Shifts.Infrastructure.Excel\Shifts.Infrastructure.Excel.csproj" />
   </ItemGroup>
 
   <ItemGroup>
