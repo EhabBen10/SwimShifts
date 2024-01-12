@@ -13,7 +13,15 @@ public static class DependencyInjection
         services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<WaterSampleContext>());
 
         services.AddDbContext<WaterSampleContext>(builder =>
-            builder.UseSqlServer(configuration.GetConnectionString("DB")));
+            builder.UseSqlServer(configuration.GetConnectionString("DB"),
+              sqlServerOptionsAction: sqlOptions =>
+                {
+                    sqlOptions.EnableRetryOnFailure(
+                        maxRetryCount: 5,
+                        maxRetryDelay: TimeSpan.FromSeconds(30),
+                        errorNumbersToAdd: null);
+                }
+            ));
         return services;
     }
 }
