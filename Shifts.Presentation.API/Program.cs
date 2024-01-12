@@ -4,8 +4,9 @@ using Shifts.Infrastructure.GoogleAuth;
 using Shifts.Presentation.GraphQL;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
+builder.Services.AddExcelService();
+builder.Services.AddDb(builder.Configuration);
+builder.Services.AddApplicationLogicServices();
 builder.Services.AddCors(options =>
     options.AddDefaultPolicy(policyBuilder =>
         policyBuilder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));

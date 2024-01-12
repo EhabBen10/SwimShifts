@@ -27,7 +27,7 @@ public class GoogleSheetsService : IGoogleSheetsService
             ApplicationName = "Vagter"
         });
         // The "spreadsheetId" is the ID of your Google Sheet, and "range" is the range you want to read.
-        SpreadsheetsResource.ValuesResource.GetRequest request = service.Spreadsheets.Values.Get("15SUZ197w4tZRtcyOqf9H3koRuGyUC0G3iFq3xTmkHkQ", "A8:I700");
+        SpreadsheetsResource.ValuesResource.GetRequest request = service.Spreadsheets.Values.Get("15SUZ197w4tZRtcyOqf9H3koRuGyUC0G3iFq3xTmkHkQ", "A8:I600");
         ValueRange response = request.Execute();
 
         IList<IList<object>> values = response.Values;
@@ -46,6 +46,12 @@ public class GoogleSheetsService : IGoogleSheetsService
                 var row = values[col];
                 for (int colIndex = 0; colIndex < row.Count; colIndex++)
                 {
+                    if (row.Contains("Saunagus"))
+                    {
+                        values.RemoveAt(col);
+                        col--; // Decrement the counter as the list size has decreased
+                        continue; // Skip the rest of the loop for this iteration
+                    }
                     if (row[colIndex] is string stringValue && stringValue == nameToSearch)
                     {
                         Shift shift = new Shift();

@@ -58,6 +58,7 @@ public class GoogleCalendarService : IGoogleCalendarService
         List<Event> events = new List<Event>();
         int year = DateTime.Now.Year;
         bool isFirstJan = true;
+        bool HasDecCome = false;
         foreach (var shift in shifts)
         {
             if (shift.Dato != null)
@@ -74,18 +75,16 @@ public class GoogleCalendarService : IGoogleCalendarService
                 }
                 int month = FindMonth(dateParts[1]);
                 int day = int.Parse(dateParts[0]);
-
-                if (month == 1 && isFirstJan)
+                if (month == 12)
+                {
+                    HasDecCome = true;
+                }
+                if (month == 1 && isFirstJan && HasDecCome)
                 {
                     year++;
                     isFirstJan = false;
                 }
-
-
                 DateTime date = new DateTime(year, month, day);
-
-
-
                 // Parse the start and end times
                 string[] timeParts = shift.Hours.Split('-');
                 string startTimeString = timeParts[0];
@@ -122,16 +121,11 @@ public class GoogleCalendarService : IGoogleCalendarService
                 // Print the results
                 Console.WriteLine("Start Date and Time: " + startDateTime);
                 Console.WriteLine("End Date and Time: " + endDateTime);
-
-                events.Add(new Event
+                Event newEvent = new Event
                 {
                     Creator = new Event.CreatorData
                     {
                         DisplayName = shift.Name,
-                    },
-                    Gadget = new Event.GadgetData
-                    {
-                        IconLink = imgUrl,
                     },
                     Summary = "Livredder ved Aarhus Svømmestadion",
                     Location = "F. Vestergaards Gade 5, 8000 Aarhus C",
@@ -161,7 +155,16 @@ public class GoogleCalendarService : IGoogleCalendarService
                         new EventReminder { Method = "popup", Minutes = 10 }
                     }
                     }
-                });
+
+                };
+                if (imgUrl != null)
+                {
+                    newEvent.Gadget = new Event.GadgetData
+                    {
+                        IconLink = imgUrl,
+                    };
+                }
+                events.Add(newEvent);
             }
 
         }
@@ -189,4 +192,8 @@ public class GoogleCalendarService : IGoogleCalendarService
         return monthInt;
     }
 
+}
+
+internal class Userinfoplus
+{
 }

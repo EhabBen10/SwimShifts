@@ -14,11 +14,14 @@ public class ShiftsController : ControllerBase
     public IGoogleCalendarService _googleCalendarService;
     public IGoogleAuthService _googleAuthService;
 
-    public ShiftsController(IGoogleSheetsService googleSheetsService, IGoogleCalendarService googleCalendarService, IGoogleAuthService googleAuthService)
+    public ICreateExcel _createExcel;
+
+    public ShiftsController(IGoogleSheetsService googleSheetsService, IGoogleCalendarService googleCalendarService, IGoogleAuthService googleAuthService, ICreateExcel createExcel)
     {
         _googleSheetsService = googleSheetsService;
         _googleCalendarService = googleCalendarService;
         _googleAuthService = googleAuthService;
+        _createExcel = createExcel;
     }
 
     [HttpGet(Name = "getshifts")]
@@ -30,5 +33,12 @@ public class ShiftsController : ControllerBase
         List<Event> events = _googleCalendarService.events(shifts, "fe");
         await _googleCalendarService.CreateEvents(events, credential);
         return null;
+    }
+    [HttpGet("download")]
+    public async Task<FileResult> Download(CancellationToken ct)
+    {
+        var file = await _createExcel.CreateWaterSampleExcel(DateTime.Now, DateTime.Now);
+
+        return File(file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "products.xlsx");
     }
 }
