@@ -1,5 +1,9 @@
+using Google.Apis.Auth.AspNetCore3;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3.Data;
+using Google.Apis.Drive.v3;
+using Google.Apis.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Shifts.Application.Interfaces;
 using Shifts.Application.Models;
@@ -34,11 +38,18 @@ public class ShiftsController : ControllerBase
         await _googleCalendarService.CreateEvents(events, credential);
         return null;
     }
-    [HttpGet("download")]
-    public async Task<FileResult> Download(CancellationToken ct)
-    {
-        var file = await _createExcel.CreateWaterSampleExcel(DateTime.Now, DateTime.Now);
 
-        return File(file, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "products.xlsx");
+    [Authorize]
+    [HttpGet("download")]
+    public async Task<IActionResult> Download(IGoogleAuthProvider auth)
+    {
+        GoogleCredential cred = await auth.GetCredentialAsync();
+        var service = new DriveService(new BaseClientService.Initializer
+        {
+            HttpClientInitializer = cred
+        });
+        var files = await service.Files.List().ExecuteAsync();
+        var fileNames = files.Files.Select(x => x.Name).ToList();
+        return Ok(fileNames);
     }
 }

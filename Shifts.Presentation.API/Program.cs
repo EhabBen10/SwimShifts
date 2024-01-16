@@ -2,8 +2,31 @@ using Shifts.Infrastructure.Sheets;
 using Shifts.Infrastructure.Calender;
 using Shifts.Infrastructure.GoogleAuth;
 using Shifts.Presentation.GraphQL;
+using Google.Apis.Auth.AspNetCore3;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services
+    .AddAuthentication(o =>
+    {
+        // This forces challenge results to be handled by Google OpenID Handler, so there's no
+        // need to add an AccountController that emits challenges for Login.
+        o.DefaultChallengeScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
+        // This forces forbid results to be handled by Google OpenID Handler, which checks if
+        // extra scopes are required and does automatic incremental auth.
+        o.DefaultForbidScheme = GoogleOpenIdConnectDefaults.AuthenticationScheme;
+        // Default scheme that will handle everything else.
+        // Once a user is authenticated, the OAuth2 token info is stored in cookies.
+        o.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    })
+    .AddCookie()
+    .AddGoogleOpenIdConnect(options =>
+    {
+        options.ClientId = builder.Configuration["GoogleSheetsConfig:client_id"];
+        options.ClientSecret = builder.Configuration["GoogleSheetsConfig:client_secret"];
+    });
+
+builder.Services.AddGoogleAuthServices(builder.Configuration);
 builder.Services.AddExcelService();
 builder.Services.AddDb(builder.Configuration);
 builder.Services.AddApplicationLogicServices();
@@ -16,10 +39,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddGoogleAuthServices(builder.Configuration);
 builder.Services.AddGoogleSheets(builder.Configuration);
 builder.Services.AddCalendarServices(builder.Configuration);
 builder.Services.AddGraphQL();
+
 
 var app = builder.Build();
 
@@ -32,6 +55,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
