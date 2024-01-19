@@ -1,5 +1,6 @@
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Shifts.Application.Interfaces;
 using Shifts.Application.Models;
@@ -34,6 +35,7 @@ public class ShiftsController : ControllerBase
         await _googleCalendarService.CreateEvents(events, credential);
         return null;
     }
+    [Authorize]
     [HttpGet("download")]
     public async Task<FileResult> Download(CancellationToken ct)
     {

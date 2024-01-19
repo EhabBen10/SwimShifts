@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pQgbVMckGbVpljprxUGN0WziCvmEnZD0khxlYGgfeq8E/giBdBGJyS9NIUBe4RAPI1T/R1AOhln9dBXbUxZ6uw==",
+  "dgSpecHash": "kHyjaWCOhEr5Fe8Nt8JztqvatQx72tVGzUive4R6bzpsssyz2FsYRAlssgtUaRnj7w0pTH2u4zyo5oLUq2dPOA==",
   "success": true,
   "projectFilePath": "/Users/ehabbasha/Projects/Shifts/Shifts.Presentation.API/Shifts.Presentation.API.csproj",
   "expectedPackageFiles": [
@@ -44,6 +44,7 @@
     "/Users/ehabbasha/.nuget/packages/hotchocolate.validation/13.5.1/hotchocolate.validation.13.5.1.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/irony.netcore/1.0.11/irony.netcore.1.0.11.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.aspnetcore.authentication.google/7.0.1/microsoft.aspnetcore.authentication.google.7.0.1.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/microsoft.aspnetcore.openapi/7.0.13/microsoft.aspnetcore.openapi.7.0.13.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.1/microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/microsoft.csharp/4.5.0/microsoft.csharp.4.5.0.nupkg.sha512",

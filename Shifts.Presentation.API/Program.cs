@@ -2,8 +2,23 @@ using Shifts.Infrastructure.Sheets;
 using Shifts.Infrastructure.Calender;
 using Shifts.Infrastructure.GoogleAuth;
 using Shifts.Presentation.GraphQL;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication.Google;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = "Application";
+    options.DefaultSignInScheme = "External";
+})
+.AddCookie("Application")
+.AddCookie("External") // Add this line
+    .AddGoogle(o =>
+    {
+        o.ClientId = builder.Configuration["GoogleSheetsConfig:client_id"];
+        o.ClientSecret = builder.Configuration["GoogleSheetsConfig:client_secret"];
+    });
+
 builder.Services.AddExcelService();
 builder.Services.AddDb(builder.Configuration);
 builder.Services.AddApplicationLogicServices();
@@ -33,6 +48,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors();
 app.UseAuthorization();
+app.UseAuthentication();
 
 app.MapControllers();
 
