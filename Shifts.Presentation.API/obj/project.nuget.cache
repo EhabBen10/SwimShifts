@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pQgbVMckGbVpljprxUGN0WziCvmEnZD0khxlYGgfeq8E/giBdBGJyS9NIUBe4RAPI1T/R1AOhln9dBXbUxZ6uw==",
+  "dgSpecHash": "F1BFdgqT/rHX4xb5+h1Txvv7qiwS8N6sHm0vo/mlxGqyZAmpDfjtOPi821EaWeb0z21o7SbtpyPB1hQpWDjVWw==",
   "success": true,
   "projectFilePath": "/Users/ehabbasha/Projects/Shifts/Shifts.Presentation.API/Shifts.Presentation.API.csproj",
   "expectedPackageFiles": [
@@ -188,7 +188,10 @@
     "/Users/ehabbasha/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/xlparser/1.5.2/xlparser.1.5.2.nupkg.sha512",
-    "/Users/ehabbasha/.nuget/packages/yarp.reverseproxy/2.0.1/yarp.reverseproxy.2.0.1.nupkg.sha512"
+    "/Users/ehabbasha/.nuget/packages/yarp.reverseproxy/2.0.1/yarp.reverseproxy.2.0.1.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.15/microsoft.netcore.app.host.osx-arm64.7.0.15.nupkg.sha512"
   ],
   "logs": []
 }

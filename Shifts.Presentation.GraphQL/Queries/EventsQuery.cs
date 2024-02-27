@@ -1,5 +1,6 @@
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Calendar.v3.Data;
+using HotChocolate.Authorization;
 using Shifts.Application.Interfaces;
 using Shifts.Application.Models;
 

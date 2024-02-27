@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "/AAUnybzY3PTEp7HcHIwLGjOwXYu7f6vS9fpoh+943cOwFkjbFrhYjLYAy1fnB4W0pVQ8sRkBeiruHggOZsmFQ==",
+  "dgSpecHash": "5QCnq3Lzp2YrLI+ICYvcZfKeSvveN9H/w35cepXkCe52yvIeysvD9GGE5AM5Fy/+0OK5GW0o9usLlUK+8qgcqA==",
   "success": true,
   "projectFilePath": "/Users/ehabbasha/Projects/Shifts/Shifts.Infrastructure.Sheets/Shifts.Infrastructure.Sheets.csproj",
   "expectedPackageFiles": [
@@ -106,7 +106,9 @@
     "/Users/ehabbasha/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/Users/ehabbasha/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/Users/ehabbasha/.nuget/packages/xlparser/1.5.2/xlparser.1.5.2.nupkg.sha512"
+    "/Users/ehabbasha/.nuget/packages/xlparser/1.5.2/xlparser.1.5.2.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.netcore.app.ref/7.0.15/microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "/Users/ehabbasha/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.15/microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512"
   ],
   "logs": []
 }
